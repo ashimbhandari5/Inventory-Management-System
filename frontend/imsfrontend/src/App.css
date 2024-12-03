@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Makes the body take up the full viewport height */
+}
+
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%; /* Adjust the width as needed */
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better visibility */
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0 16px;
+  z-index: 1000;
+}
+
+.header-container .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 14px;
+  background-color: transparent;
+  width: 200px;
+}
+
+.search-container .search {
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-icons .icon {
+  font-size: 14px;
+  cursor: pointer;
+  color: black;
+  background: none;
+  border: none;
+}
+
+main {
+  margin-top: 60px; /* To prevent overlap with fixed header */
+}

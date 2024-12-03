@@ -1,0 +1,26 @@
+.form,
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  width: 50%;
+}
+  button{
+    background-color: rgb(173, 215, 21);
+    width: 50%;
+    margin: 10px;
+  }
+  .button-submit {
+    background-color: rgb(31, 209, 81);
+  }
+  
