@@ -1,0 +1,54 @@
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Space between search and navigation */
+  align-items: center;
+  height: 60px;
+  width: 170vh;
+  background-color: white;
+  padding: 0 16px; /* Add padding for consistent spacing */
+  border-bottom: 1px solid #ddd; /* Subtle border for better separation */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between search icon and input */
+  flex: 1; /* Allow search to take remaining space */
+}
+
+.search-container input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  width: 200px;
+  font-size: 14px;
+}
+
+.nav-all {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Space between navigation items */
+}
+
+.icon-profile,
+.icon-bell {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #333; /* Neutral color for icons */
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Blue color for buttons */
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

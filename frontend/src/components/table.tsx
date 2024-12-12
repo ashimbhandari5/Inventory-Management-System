@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
 import Data from "../data.json";
+import "./table.css";
 
 const Table = () => {
   const [searchText, setSearchText] = useState("");

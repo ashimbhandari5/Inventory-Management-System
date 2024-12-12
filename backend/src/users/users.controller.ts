@@ -11,10 +11,10 @@ import {
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { AdminGuard } from 'src/guards/admin/admin.guard';
+// import { AdminGuard } from 'src/guards/admin/admin.guard';
 
 @Controller('users')
-@UseGuards(AdminGuard)
+@UseGuards()
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 

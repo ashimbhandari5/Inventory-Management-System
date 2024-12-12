@@ -53,4 +53,11 @@ export class AuthService {
       token,
     };
   }
+  async getProfile(userId: number) {
+    const user = await this.prismaService.user.findFirst({
+      where: { id: userId },
+    });
+    if (!user) throw new NotFoundException();
+    return user;
+  }
 }
