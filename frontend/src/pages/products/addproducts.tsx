@@ -60,7 +60,7 @@ const AddProduct = () => {
         <h1>Add Products</h1>
         <button
           className="button-back"
-          style={{ marginLeft: 16, padding: "4px 16px", width: "40%" }}
+          style={{ marginLeft: 16, padding: "4px 16px", width: "20%" }}
           onClick={() => {
             navigate("/products");
           }}

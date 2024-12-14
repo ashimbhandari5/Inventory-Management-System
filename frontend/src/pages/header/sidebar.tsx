@@ -32,6 +32,15 @@ export default function Sidebar() {
         </li>
         <li>
           <NavLink
+            to="/organizations"
+            className={({ isActive }) => (isActive ? "active-item" : "")}
+          >
+            <PackageOpen />
+            Organization
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/ads"
             className={({ isActive }) => (isActive ? "active-item" : "")}
           >

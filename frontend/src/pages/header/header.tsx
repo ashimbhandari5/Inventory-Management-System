@@ -1,8 +1,14 @@
-import { Bell, Search, UserRound } from "lucide-react";
+import { Bell, UserRound } from "lucide-react";
 import { useNavigate } from "react-router";
 import "./header.css";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../components/context/userContext";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@radix-ui/react-dropdown-menu";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -38,22 +44,20 @@ const Header = () => {
       <h1>Hi {user?.name}!</h1>
       <div className="nav-all">
         <Bell className="icon-bell" />
-        <UserRound className="icon-profile" />
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <UserRound className="icon-profile cursor-pointer" />
+          </DropdownMenuTrigger>
 
-        <button
-          style={{ marginLeft: 16, padding: "4px 16px", width: "30%" }}
-          onClick={handleLoginNavigation}
-        >
-          Login
-        </button>
-        <button
-          style={{ marginLeft: 16, padding: "4px 16px", width: "30%" }}
-          onClick={() => {
-            navigate("/organizations");
-          }}
-        >
-          Signup
-        </button>
+          <DropdownMenuContent className="dropdown-menu">
+            <DropdownMenuItem onClick={() => navigate("/settings")}>
+              Settings
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => navigate("/login")}>
+              Logout
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );

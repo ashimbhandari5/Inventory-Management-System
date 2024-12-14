@@ -4,11 +4,11 @@ import { api } from "../../api";
 import CustomInput from "../../components/customInput";
 import CustomButton from "../../components/customButton";
 import "./login.css";
-import { AuthContext } from "../../components/context/authContext";
+import { useAuth } from "../../components/context/authContext";
 
 export default function Login() {
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext);
+  const { login } = useAuth();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

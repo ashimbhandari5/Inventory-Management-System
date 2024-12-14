@@ -12,12 +12,11 @@ import Login from "./pages/header/login";
 import Signup from "./pages/header/signup";
 import NewOrganization from "./pages/header/newOrganization";
 import AppLayout from "./pages/appLayout";
-import { useContext } from "react";
-import { AuthContext } from "./components/context/authContext";
+import { useAuth } from "./components/context/authContext";
 
 const ProtectedRoutes = () => {
-  const { isAuthenticated } = useContext(AuthContext);
-  return isAuthenticated ? <AppLayout /> : <Navigate to={"/login"} />;
+  const { token } = useAuth();
+  return token ? <AppLayout /> : <Navigate to={"/login"} />;
 };
 function App() {
   return (
