@@ -1,4 +1,4 @@
-import { Bell, UserRound } from "lucide-react";
+import { Bell, LogOut, Settings, UserRound } from "lucide-react";
 import { useNavigate } from "react-router";
 import "./header.css";
 import { useContext, useEffect, useState } from "react";
@@ -51,9 +51,11 @@ const Header = () => {
 
           <DropdownMenuContent className="dropdown-menu">
             <DropdownMenuItem onClick={() => navigate("/settings")}>
-              Settings
+              <Settings />
+              Setting
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => navigate("/login")}>
+              <LogOut />
               Logout
             </DropdownMenuItem>
           </DropdownMenuContent>
